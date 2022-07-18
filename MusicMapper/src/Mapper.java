@@ -1,3 +1,7 @@
+// --== CS400 File Header Information ==--
+// Name: Michael Rehani
+// Email: mrrehani@wisc.edu
+// Notes to Grader: <optional extra notes>
 import java.io.*;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -313,7 +317,7 @@ public class Mapper {
 		File file = new File(System.getProperty("user.dir"));
 		String parentPath = file.getAbsoluteFile().getParent();
 		try {
-			map.createGraph("testData.csv");
+			map.createGraph("metal_bands_2017_updated.csv");
 		} catch (IOException IOE) {
 			System.out.println("An unexpected error occured when loading the data and creating the graph!"
 					+ "Please verify that the data is in the correct folder (labeled 'data') and try again");

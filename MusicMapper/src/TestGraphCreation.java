@@ -1,10 +1,14 @@
+// --== CS400 File Header Information ==--
+// Name: Michael Rehani
+// Email: mrrehani@wisc.edu
+// Notes to Grader: <optional extra notes>
 import static org.junit.jupiter.api.Assertions.*;
 import java.io.IOException;
 import java.util.ArrayList;
 
 import org.junit.jupiter.api.Test;
 
-class testGraphCreation {
+public class TestGraphCreation {
 
 	Mapper mapper = new Mapper();
 
