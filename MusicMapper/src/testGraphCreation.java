@@ -122,8 +122,25 @@ class testGraphCreation {
 	}
 	
 	@Test
-	void testInputHandling() {
+	void testInputHandling() throws IOException {
+		mapper.createGraph("testData.csv");
+		mapper.addEdges();
 		
+		//Verifying that capital letters/additional spaces are handled properly.
+		String[] input = { " IRON MAIDEN           ", "sLAYer" };
+		ArrayList<Mapper.Band> matchingBands = mapper.findRecommendations(input);
+		String[] expectedOutput = { "metallica", "megadeth", "black sabbath" };
+
+		//We want to verify that all bands in the expected output are in the actual output.
+		//To do this, we must first create a new arraylist that doesn't contain Band objects, but rather String objects. 
+		ArrayList<String> bandsNames = new ArrayList<String>();
+		for (Mapper.Band band : matchingBands) {
+			bandsNames.add(band.name);
+		}
+		
+		for (int i = 0; i < expectedOutput.length; i++) {
+			if (!bandsNames.contains(expectedOutput[i])) fail();
+		}
 	}
 
 	@Test
