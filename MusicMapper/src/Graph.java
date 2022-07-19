@@ -472,48 +472,4 @@ public class Graph<T> implements GraphADT<T> {
 	}
 	
 	
-	public static void main(String[] args) {
-		
-		Graph<String> graph = new Graph<String>();
-		graph.insertVertex("A");
-		graph.insertVertex("B");
-		graph.insertVertex("C");
-		graph.insertVertex("D");
-		graph.insertVertex("E");
-		graph.insertVertex("F");
-		graph.insertVertex("G");
-		graph.insertVertex("H");
-		graph.insertVertex("I");
-		graph.insertVertex("J");
-		
-		graph.insertEdge("A", "H", 8);
-		graph.insertEdge("A", "B", 1);
-		graph.insertEdge("A", "C", 5);
-		graph.insertEdge("B", "C", 3);
-		graph.insertEdge("C", "E", 3);
-		graph.insertEdge("C", "F", 4);
-		graph.insertEdge("D", "A", 7);
-		graph.insertEdge("D", "G", 2);
-		graph.insertEdge("F", "G", 9);
-		graph.insertEdge("G", "J", 7);
-		graph.insertEdge("H", "I", 2);
-		graph.insertEdge("H", "B", 6);
-		graph.insertEdge("I", "H", 2);
-		graph.insertEdge("I", "J", 5);
-		graph.insertEdge("I", "D", 1);
-		
-		System.out.println(graph.dijkstrasShortestPath("I"));
-		System.out.println(graph.getPathCost("I","J"));
-		
-		Scanner myObj = new Scanner(System.in);  // Create a Scanner object
-
-	    String[] userName = myObj.nextLine().split(",");  // Read user input
-	    for (int i = 0; i < userName.length; i++) {
-	    	System.out.println(userName[i].trim());
-	    }
-	    	
-	}
-
-	
-
 }
