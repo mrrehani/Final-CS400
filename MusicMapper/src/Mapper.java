@@ -277,7 +277,7 @@ public class Mapper {
 			int currSize = paths.size();
 			while (matchingBands.size() < 1000 && currSize > 0) {
 				for (String key : matchingBandsHM.keySet()) {
-					if (matchingBandsHM.get(key)[1] == currSize) {
+					if (matchingBandsHM.get(key)[1] >= currSize) {
 						// Band objects are used so that they can be easily sorted in an array according
 						// to its weight attribute
 						matchingBands.add(new Band(key, matchingBandsHM.get(key)[0] / matchingBandsHM.get(key)[1]));
